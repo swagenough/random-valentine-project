@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>fery valentine</title>
+        <style>
+            /* Center the buttons and text */
+            body {
+                text-align: center;
+            }
+            /* Style for the buttons */
+            button {
+                font-size: 25px;
+                background-color: pink;
+                color: red;
+                border-radius: 25px;
+                margin: 10px;}
+        </style>
+    </head>
+    <body>
+
+        <p>
+            <b>Will you be my valentine?</b>
+        </p>
+        <img src="https://i.pinimg.com/originals/b5/52/43/b552434cc2590b1dc6222687480ca147.jpg" height="150" width="120"></img>
+        <br> <br>
+
+        <button id="tombolYes" onclick="yay()" style="font-size:25px; background-color:pink; color: red; border-radius:25px;">yes</button>
+
+        <button id="tombolNo" onclick="membesar()" style="font-size:25px; background-color:pink; color: red; border-radius:25px;">no >:(</button>
+
+        <script>
+            let word = ""
+            let sizeAwal = 25;
+            function membesar(){
+                const buttonYes = document.getElementById("tombolYes"); sizeAwal+=10;
+                word += "!"
+                buttonYes.style.fontSize = sizeAwal + "px";
+                buttonYes.textContent = "pls" + word;
+            }
+            function yay(){
+                const buttonYes = document.getElementById("tombolYes");
+                buttonYes.textContent = "thank you :)";
+                const buttonNo = document.getElementById("tombolNo");
+                buttonNo.remove();
+            }
+        </script>
+    </body>
+</html>
